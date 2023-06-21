@@ -23,6 +23,10 @@
     <!-- font awosome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    
     <!-- special css -->
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -48,21 +52,26 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              <i class="fa-regular fa-user" style="color: #6627d3;"></i>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Sign Up</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
+        
+        </ul>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <button class="btn btn-light" onclick="darMode()"> <i class="fa-solid fa-moon" style="color: #111212;"></i></button>
           </li>
         </ul>
+
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Arama İçin..." aria-label="Search">
+          <input id= "tags" class="form-control me-2" type="search" placeholder="Arama İçin..." aria-label="Search">
           <button class="btn btn-primary" type="submit">Ara </button> <!--btn-outline-success-->
         </form>
       </div>
@@ -83,11 +92,24 @@
 
   <!-- start main codes-->
   <main id="main_id">
-    
+    <section>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet numquam nostrum harum, incidunt repellat tempore nam, saepe dolor, corporis possimus nihil reiciendis magni sunt cumque ea impedit et veniam quam.
+      Aut quod consectetur asperiores officia corrupti sunt laborum ipsam corporis quo, neque deserunt explicabo recusandae, voluptatum sed maiores at quaerat ullam natus laudantium, molestias nemo maxime veritatis? Magnam, fugit nobis.
+      Quo laboriosam asperiores delectus unde accusamus placeat. Eum molestias debitis harum tempora voluptatem ratione quidem, excepturi, molestiae unde vitae distinctio, temporibus eveniet earum dolorum. Iure voluptatum beatae rerum saepe nesciunt.
+      Omnis praesentium nemo eveniet rerum quos fugiat sit corporis optio, reiciendis ea fugit dolorum pariatur soluta asperiores repellendus eum reprehenderit, magnam molestiae recusandae molestias quisquam. Numquam recusandae quo repudiandae rerum?
+      Possimus voluptatum exercitationem, dolor in soluta voluptatem similique nobis assumenda magnam nemo corrupti expedita quas quos placeat quod esse, odit amet vitae praesentium vel natus deserunt, quae facilis reprehenderit. In.
+      Cum fuga ad quo, veritatis ipsa modi ab impedit! Modi accusantium voluptatem exercitationem cupiditate velit perferendis molestiae quaerat, ratione doloribus eligendi, necessitatibus quod maxime animi quo rerum fuga consequatur delectus!
+      Eum libero et incidunt, voluptates est aliquam consequuntur placeat, velit odio ab saepe inventore delectus ducimus praesentium aut magnam distinctio obcaecati numquam tempore. Repellendus libero dolorem reprehenderit iure veritatis voluptates!
+      Dolores provident, dolorum quaerat deleniti odit minus amet, voluptatem, libero sit quos aspernatur dolorem saepe assumenda temporibus doloremque sapiente laudantium blanditiis voluptates deserunt ducimus. Perferendis eligendi aut reprehenderit aliquam illum!</p>
+    </section>
   </main>
 
   <!-- start footer codes-->
-  <footer id="footer_id"></footer>
+  <footer id="footer_id" class="bg-dark">
+    <div class="text-center padding--5 bg-dark" id="copy_right">
+      2021-<span id="date_id"></span> &copy; Bütün Haklar Saklıdır.
+    </div>
+  </footer>
 
    <!-- end codes-->
 

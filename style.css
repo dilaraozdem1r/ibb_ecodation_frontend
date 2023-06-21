@@ -7,7 +7,11 @@ Version : v.1
 
 
 /* #############################################*/
-/*Root/*
+/*Root*/
+:root{
+  --templateBgColor:rgb(43,43,43);
+}
+
 
 
 /* #############################################*/
@@ -104,6 +108,14 @@ i{
 }
 
 
+/*Navbar*/
+.dark_mode{
+  background-color: var(--templateBgColor);
+  color: #fff;
+}
+
+
+
 /* #############################################*/
 /*Header*/
 header{
@@ -114,4 +126,13 @@ header{
   z-index: -1;
   height: 80vh;
   padding-top:2rem;
+}
+
+/* Footer */
+
+footer{
+  min-height: 15rem;
+  width: auto;
+  color:white;
+
 }
