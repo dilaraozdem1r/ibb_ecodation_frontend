@@ -1,7 +1,7 @@
 //Dark Mode
 
-let darkModu=()=>{
-    window.document.classList.toggle('dark-mode');
+let darkMode=()=>{
+    document.body.classList.toggle('dark_mode');
 }
 
 //input search
