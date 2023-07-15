@@ -159,5 +159,26 @@ const data3=55;
 console.log(data3);
 
 
-
 //String
+let str=" js öğreniyorum js";
+console.log(str);
+console.log(str.length);
+console.log(str.trim().length);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+console.log(str.charAt(1));
+console.log(str.indexOf("js"));
+console.log(str.lastIndexOf("js"));
+
+console.log(str.concat("sona"));
+console.log(str.replace(str,"değiştir"));
+
+console.log(str.substring(1));
+console.log(str.substring(1,4));
+
+
+
+
+
+
