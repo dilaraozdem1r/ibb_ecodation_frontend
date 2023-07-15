@@ -144,4 +144,20 @@ console.log(String(30)+10);
 var number=30;
 console.log(number.toString()+10);
 
+//var, let, const
+var data1=11;
+console.log(data1);
+
+var data1=22;
+console.log(data1);
+
+let data2=33;
+data2=44;
+console.log(data2);
+
+const data3=55;
+console.log(data3);
+
+
+
 //String
