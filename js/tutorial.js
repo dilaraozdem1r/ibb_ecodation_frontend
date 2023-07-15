@@ -178,7 +178,42 @@ console.log(str.substring(1));
 console.log(str.substring(1,4));
 
 
+//function
+
+function returnsuzParametresiz(){
+    console.log("deneme1");
+}
+
+returnsuzParametresiz();
+
+function returnsuzParametreli(ad){
+console.log(ad);
+}
+
+returnsuzParametreli("mehmet");
+
+function returnliParametresiz(){
+    return "deneme2";
+}
+let result=returnliParametresiz();
+console.log(result);
+
+function returnliParametreli(soyad){
+    return "deneme3 "+soyad;
+}
+let result=returnliParametreli("ali");
+console.log(result);
 
 
+//Normal Funciton
+function normalFunction(){}
 
+//Anoymous Function
+let anoymousFunction=function(){};
 
+//Arrow Function
+let arrowFunction=()=>{};
+
+//Immedia Function
+// condition
+// loop, 
