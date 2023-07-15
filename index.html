@@ -54,34 +54,65 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#messages">Çalışmalarımız</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-regular fa-user text-primary"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginId">Login</a></li>
-                            <li><a class="dropdown-item" href="#">Register</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <button class="btn btn-primary" onclick="darkModu()"> <i class="fa-solid fa-moon"></i></button>
+                        <a class="nav-link" href="#parallax">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newspaper">Yeni Haberler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">İletişim</a>
                     </li>
                 </ul>
+
                 <form class="d-flex" role="search">
                     <input id="tags" class="form-control me-2" type="search" placeholder="Arama İçin ..."
                         aria-label="Search">
                     <button class="btn btn-primary" type="submit">Ara</button> <!-- btn-outline-success
               -->
                 </form>
+                
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-regular fa-user text-primary fa-xs"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginId">Login</a></li>
+                            <li><a class="dropdown-item" href="#">Register</a></li>
+                           
+                
+                        </ul>
+                    </li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-globe text-primary fa-xs"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginId">TR</a></li>
+                                <li><a class="dropdown-item" href="#">EN</a></li>
+                               
+                    
+                            </ul>
+                        </li>
+                        </ul>
+              
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mr-0">
+                    <li class="nav-item">
+                        <button class="btn btn-primary" onclick="darkModu()"> <i class="fa-solid fa-moon"></i></button>
+                    </li>
+                </ul>
+               
             </div>
         </div>
     </nav>
@@ -386,7 +417,47 @@
           <!-- newspaper end -->
 
            <!-- newspaper start -->
-          <section id="contact"></section>
+          <section id="contact">
+            <h2 class="myHeading">İletişim</h2>
+            <div class="row">
+            <div class="col-md-6">
+                <iframe
+                width="600"
+                height="450"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBzfwiJya8ZjzQ0HfPfOdXbJ2DJYZlN_jw=15&q=İzmir/Türkiye">
+               </iframe>
+             
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <form  >
+                    <!-- Name input -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">First and last name</span>
+                        <input type="text" aria-label="First name" class="form-control">
+                        <input type="text" aria-label="Last name" class="form-control">
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="phone-addon"><i class="fas fa-phone"></i></span>
+                        <input type="tel" class="form-control" placeholder="Telefon Numarası" aria-label="Telefon Numarası" aria-describedby="phone-addon">
+                      </div>
+                      
+
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 100px" ></textarea>
+                        <label for="floatingTextarea2Disabled">Your Messages</label>
+                      </div>
+                
+          
+                   
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Save</button>
+                </form>
+            </div>
+        </div>
+          </section>
            <!-- newspaper end -->
     </main>
    
@@ -399,7 +470,7 @@
     </footer>
     <!-- end footer codes -->
 
-    <a href="#navbar_id" id="back_top" class="btn btn-primary"><i class="fa-solid fa-arrow-up-long"></i></a>
+    <a href="#" id="back_top" class="btn btn-primary"><i class="fa-solid fa-arrow-up-long"></i></a>
 
     <!-- end codes -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -412,6 +483,8 @@
 
     <!-- external JS -->
     <script src="template.js"></script>
+   
 </body>
+
 
 </html>

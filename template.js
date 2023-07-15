@@ -23,4 +23,10 @@ let newDate=()=>{
     $("#date_id").html(date);
 }
 
+//scrollpy
+document.getElementById('back_top').addEventListener('click', function(e) {
+    e.preventDefault(); 
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Sayfanın en üstüne animasyonlu bir şekilde kaydır
+  });
+
 newDate();
