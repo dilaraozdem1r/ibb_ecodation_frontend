@@ -112,3 +112,36 @@ console.log(Math.round(6.5));
 console.log(Math.sin(90));
 
 console.log(Math.random());
+
+//Number
+var sayi=1500;
+console.log(sayi);
+
+var sayi2=1.5E+4; //15E+3
+console.log(sayi2);
+
+//binary, octal,decimak,hexadecimal 
+var binary=0b1010;
+console.log(binary);
+
+var octal=0o1010;
+console.log(octal);
+
+var decimal=123456;
+console.log(decimal);
+
+var hexadecimal=0x1010;
+console.log(hexadecimal);
+
+
+//Cast
+//Number cast ile parseInt cast arasındaki fark nedir ?
+console.log(Number("3")+10);
+console.log(parseInt("3")+10);
+
+//string ile toString arasındaki fark ?
+console.log(String(30)+10);
+var number=30;
+console.log(number.toString()+10);
+
+//String
