@@ -331,8 +331,53 @@ const debugData=()=>{
         sum+=i;
     }
 }
+debugData();
 
-// return break continue ? 
+// break  : döngünün çalışmasına izin verme
+// return : metodun çalışmasına izin verme
+// continue : sadece 1 seferlik o şartta çalışma
 
+let sumExamplesData=()=>{
+    let user=Number(prompt("Lütfen bitiş sayısını giriniz"));
+    let commonSum=0;
+    let oddSum=0,oddCounter=0, oddNumber=0;
+    let evenSum=0,evenCounter=0, evenNumber=0;
+
+    for(let i=0;i<user;i++){
+        if(user===44){
+            console.log("secret key number failed" + user);
+            break;
+        }
+        if(i===50){
+            console.log("en fazla 50 sayısına kadar hesaplanır" + user);
+            break;
+        }
+
+        if(i===7){
+            console.log("7 sayısını toplama" + user);
+            continue;
+        }
+        commonSum+=i;
+        if(i%2==0){
+            evenSum+=i;
+            evenCounter++;
+            evenNumber=i;
+        }else{
+            oddSum+=i;
+            oddCounter++;
+            oddNumber=i;
+        }
+    }
+    console.log("Toplam : "+ commonSum);
+
+    console.log("Tek sayılar: " + oddNumber)
+    console.log("Tek sayı adedi : "+ oddCounter);
+    console.log("Tek sayı toplamı : "+ oddSum);
+
+    console.log("Çift sayılar: " + evenNumber)
+    console.log("Çift sayı adedi : "+ evenCounter);
+    console.log("Çift sayı toplamı : "+ evenSum);
+}
+sumExamplesData();
 
 
