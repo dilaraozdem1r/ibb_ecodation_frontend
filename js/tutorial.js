@@ -249,6 +249,7 @@ const condi3 = () => {
 // break    : döngü kırmak
 // continue : 1 kereye mahsus ess geç sonra döngüye devam et
 // return   : metot kırmak
+//switch 'in karmaşıklığı if-else'den daha fazladır.
     switch(number){
         case 1:
             console.log("1");
@@ -269,5 +270,69 @@ const condi3 = () => {
   }
 condi5();
 
+
+let isOddEven=()=>{
+    const num=4;
+    if(num%2==0){
+        console.log("çift");
+    }else{
+        console.log("tek");
+    }
+//    console.log(num%2==0 ?"cift" : "tek") ;
+}
+
   
 // loop,
+let loop = ()=>{
+    for (let i =1 ; i<=10 ;i++){
+        document.write(i + " ");
+    }
+}
+loop ();
+document.writeln ("<br/>");
+
+let loop2 = () =>{
+    let i =1;
+    while(i<=10 ){
+        document.write(i + " ");
+    }
+}
+
+let loop3 = () =>{
+    let i=0;
+    do{
+        document.write(i + " ");
+        i++;
+    }
+    while(i<=10);
+}
+
+loop3();
+
+//try catch
+let tryCatchTuto = ()=>{
+    try{
+        alert("pop-up");
+    }catch(error){
+        console.log("hata mesajı :" +error.message);
+    }finally{
+        console.log("db.close");
+    }
+}
+
+tryCatchTuto();
+
+//debug nedir ?
+//1 ile 10 dahil olmak üzereye toplama işlemini yapan algoritmayı yaz
+
+const debugData=()=>{
+    const sum=0;
+    for (let i=0 ; i<=10 ; i++){
+        sum+=i;
+    }
+}
+
+// return break continue ? 
+
+
+
