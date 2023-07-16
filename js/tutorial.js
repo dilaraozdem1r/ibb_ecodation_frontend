@@ -211,173 +211,202 @@ let arrowFunction = () => {};
 
 // condition
 const condi1 = () => {
-    let number = 4;
-    if(number>=2){
-        console.log("büyüktür");
+  let number = 4;
+  if (number >= 2) {
+    console.log("büyüktür");
   } else {
-        console.log("küçüktür");
-  };
-}
+    console.log("küçüktür");
+  }
+};
 
 const condi2 = () => {
-    let number = 4;
-    let result  = (number>=2 )? "büyüktür" : "küçüktür";
-    console.log(result);
-  };
+  let number = 4;
+  let result = number >= 2 ? "büyüktür" : "küçüktür";
+  console.log(result);
+};
 
-  
 const condi3 = () => {
-    let number = 4;
-    console.log((number>=2 )? "büyüktür" : "küçüktür");
-  };
+  let number = 4;
+  console.log(number >= 2 ? "büyüktür" : "küçüktür");
+};
 
-  const condi4 = () => {
-    let number = 4;
-    if(number=="1"){
-        console.log("1");
-  } else if(number=="2"){
-        console.log("2");
-  } else if(number=="3"){
-        console.log("3");
-  }else {
-        console.log("1< X <3 dışındadır");
+const condi4 = () => {
+  let number = 4;
+  if (number == "1") {
+    console.log("1");
+  } else if (number == "2") {
+    console.log("2");
+  } else if (number == "3") {
+    console.log("3");
+  } else {
+    console.log("1< X <3 dışındadır");
   }
-}
+};
 
-  const condi5 = () => {
-    let number=4;
-// break    : döngü kırmak
-// continue : 1 kereye mahsus ess geç sonra döngüye devam et
-// return   : metot kırmak
-//switch 'in karmaşıklığı if-else'den daha fazladır.
-    switch(number){
-        case 1:
-            console.log("1");
-            break;
-        case 2:
-            console.log("2");
-            break;
-        case 3:
-            console.log("3");
-            break;
-        case 4:
-            console.log("4");
-            break;
-        default:
-            console.log("1< X <4 dışındadır");
-            break;
-    }
+const condi5 = () => {
+  let number = 4;
+  // break    : döngü kırmak
+  // continue : 1 kereye mahsus ess geç sonra döngüye devam et
+  // return   : metot kırmak
+  //switch 'in karmaşıklığı if-else'den daha fazladır.
+  switch (number) {
+    case 1:
+      console.log("1");
+      break;
+    case 2:
+      console.log("2");
+      break;
+    case 3:
+      console.log("3");
+      break;
+    case 4:
+      console.log("4");
+      break;
+    default:
+      console.log("1< X <4 dışındadır");
+      break;
   }
+};
 condi5();
 
+let isOddEven = () => {
+  const num = 4;
+  if (num % 2 == 0) {
+    console.log("çift");
+  } else {
+    console.log("tek");
+  }
+  //    console.log(num%2==0 ?"cift" : "tek") ;
+};
 
-let isOddEven=()=>{
-    const num=4;
-    if(num%2==0){
-        console.log("çift");
-    }else{
-        console.log("tek");
-    }
-//    console.log(num%2==0 ?"cift" : "tek") ;
-}
-
-  
 // loop,
-let loop = ()=>{
-    for (let i =1 ; i<=10 ;i++){
-        document.write(i + " ");
-    }
-}
-loop ();
-document.writeln ("<br/>");
+let loop = () => {
+  for (let i = 1; i <= 10; i++) {
+    document.write(i + " ");
+  }
+};
+loop();
+document.writeln("<br/>");
 
-let loop2 = () =>{
-    let i =1;
-    while(i<=10 ){
-        document.write(i + " ");
-    }
-}
+let loop2 = () => {
+  let i = 1;
+  while (i <= 10) {
+    document.write(i + " ");
+  }
+};
 
-let loop3 = () =>{
-    let i=0;
-    do{
-        document.write(i + " ");
-        i++;
-    }
-    while(i<=10);
-}
+let loop3 = () => {
+  let i = 0;
+  do {
+    document.write(i + " ");
+    i++;
+  } while (i <= 10);
+};
 
 loop3();
 
 //try catch
-let tryCatchTuto = ()=>{
-    try{
-        alert("pop-up");
-    }catch(error){
-        console.log("hata mesajı :" +error.message);
-    }finally{
-        console.log("db.close");
-    }
-}
+let tryCatchTuto = () => {
+  try {
+    alert("pop-up");
+  } catch (error) {
+    console.log("hata mesajı :" + error.message);
+  } finally {
+    console.log("db.close");
+  }
+};
 
 tryCatchTuto();
 
 //debug nedir ?
 //1 ile 10 dahil olmak üzereye toplama işlemini yapan algoritmayı yaz
 
-const debugData=()=>{
-    const sum=0;
-    for (let i=0 ; i<=10 ; i++){
-        sum+=i;
-    }
-}
+const debugData = () => {
+  const sum = 0;
+  for (let i = 0; i <= 10; i++) {
+    sum += i;
+  }
+};
 debugData();
 
 // break  : döngünün çalışmasına izin verme
 // return : metodun çalışmasına izin verme
 // continue : sadece 1 seferlik o şartta çalışma
 
-let sumExamplesData=()=>{
-    let user=Number(prompt("Lütfen bitiş sayısını giriniz"));
-    let commonSum=0;
-    let oddSum=0,oddCounter=0, oddNumber=0;
-    let evenSum=0,evenCounter=0, evenNumber=0;
+let sumExamplesData = () => {
+  let user = Number(prompt("Lütfen bitiş sayısını giriniz"));
+  let commonSum = 0;
+  let oddSum = 0,
+    oddCounter = 0,
+    oddNumber = 0;
+  let evenSum = 0,
+    evenCounter = 0,
+    evenNumber = 0;
 
-    for(let i=0;i<user;i++){
-        if(user===44){
-            console.log("secret key number failed" + user);
-            break;
-        }
-        if(i===50){
-            console.log("en fazla 50 sayısına kadar hesaplanır" + user);
-            break;
-        }
-
-        if(i===7){
-            console.log("7 sayısını toplama" + user);
-            continue;
-        }
-        commonSum+=i;
-        if(i%2==0){
-            evenSum+=i;
-            evenCounter++;
-            evenNumber=i;
-        }else{
-            oddSum+=i;
-            oddCounter++;
-            oddNumber=i;
-        }
+  for (let i = 0; i < user; i++) {
+    if (user === 44) {
+      console.log("secret key number failed" + user);
+      break;
     }
-    console.log("Toplam : "+ commonSum);
+    if (i === 50) {
+      console.log("en fazla 50 sayısına kadar hesaplanır" + user);
+      break;
+    }
 
-    console.log("Tek sayılar: " + oddNumber)
-    console.log("Tek sayı adedi : "+ oddCounter);
-    console.log("Tek sayı toplamı : "+ oddSum);
+    if (i === 7) {
+      console.log("7 sayısını toplama" + user);
+      continue;
+    }
+    commonSum += i;
+    if (i % 2 == 0) {
+      evenSum += i;
+      evenCounter++;
+      evenNumber = i;
+    } else {
+      oddSum += i;
+      oddCounter++;
+      oddNumber = i;
+    }
+  }
+  console.log("Toplam : " + commonSum);
 
-    console.log("Çift sayılar: " + evenNumber)
-    console.log("Çift sayı adedi : "+ evenCounter);
-    console.log("Çift sayı toplamı : "+ evenSum);
-}
+  console.log("Tek sayılar: " + oddNumber);
+  console.log("Tek sayı adedi : " + oddCounter);
+  console.log("Tek sayı toplamı : " + oddSum);
+
+  console.log("Çift sayılar: " + evenNumber);
+  console.log("Çift sayı adedi : " + evenCounter);
+  console.log("Çift sayı toplamı : " + evenSum);
+};
 sumExamplesData();
 
+const usernameAndSurnameMasking = () => {
+  let isimSoyisim = String(prompt("Lütfen isminizi ve soyadınızı giriniz"));
+  
+  const userIndex=isimSoyisim.indexOf(" ");
+  let isim = isimSoyisim.substring(0, userIndex);
+  for (let i = 1; i < isim.length; i++) {
+    isim = isim.replace(isim.charAt(i), "*");
+  }
+  isim=isim.toUpperCase();
+  let soyad = isimSoyisim.substring(
+    userIndex + 1,
+    isimSoyisim.length
+  );
+  for (let i = 3; i < soyad.length; i++) {
+    soyad = soyad.replace(soyad.charAt(i), "*");
+  }
 
+  console.log(isim.concat("").concat(soyad));
+ 
+};
+
+//software prensible
+//Monad
+//setTimeOut
+//callBackFunction
+//asyn/await
+//dizi , forEach, map, filter
+//obje
+//dom
+//jquery ajax GET/POST
