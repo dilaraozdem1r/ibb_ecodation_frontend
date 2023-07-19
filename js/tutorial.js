@@ -460,8 +460,51 @@ const promTutorial = () => {
 };
 promTutorial();
 
+
 //asyn/await
+
 //dizi , forEach,for, for in, for of, map, filter, fill
+let arr=() =>{
+  const numbers=[5,6,3,11,66]
+  return numbers;
+}
+
+
+let arrResult=()=>{
+  let data=arr();
+  console.log(data);
+  console.log(data[data.length-1]);
+
+  //Iterative For Loop
+  for(let i=0;i<data.length;i++){
+    document.write(data[i]+ " ");
+  }
+
+  document.writeln("<br/>");
+
+  //for in 
+  for(let i in data){
+    document.write(i + "=>" + data[i]+ " ");
+  } 
+  document.writeln("<br/>");
+
+  // for of
+  for(let i of data){
+    document.write(i +" ");
+  } 
+
+  document.writeln("<br/>");
+  
+  //ForEach
+  data.forEach((item)=>{
+    document.write(item +" ");
+  })
+
+}
+arrResult();
+
+//FIFO, LIFO NEDİR ?
+
 //obje
 //dom
 //jquery ajax GET/POST
