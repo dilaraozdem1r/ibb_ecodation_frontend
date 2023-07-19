@@ -415,8 +415,18 @@ console.log(Math.sqrt(data));
 }
 ikinci();
 
+//setTimeOut, setInterval()
 
-//setTimeOut
+//belirli zaman sonra tek bir kere çalışır ve durur.
+setTimeout(function(){
+  console.log("setTimeout")
+},2000)
+
+//belirli bir zaman sonra sonsuz döngüde çalışır.
+setInterval(function(){
+  console.log("setInterval")
+},2000);
+
 //callBackFunction
 //asyn/await
 //dizi , forEach, map, filter
