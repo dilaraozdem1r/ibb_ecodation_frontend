@@ -382,7 +382,7 @@
 
 // const usernameAndSurnameMasking = () => {
 //   let isimSoyisim = String(prompt("Lütfen isminizi ve soyadınızı giriniz"));
-  
+
 //   const userIndex=isimSoyisim.indexOf(" ");
 //   let isim = isimSoyisim.substring(0, userIndex);
 //   for (let i = 1; i < isim.length; i++) {
@@ -398,7 +398,7 @@
 //   }
 
 //   console.log(isim.concat("").concat(soyad));
- 
+
 // };
 
 //software prensible
@@ -418,31 +418,48 @@
 //setTimeOut, setInterval()
 
 //belirli zaman sonra tek bir kere çalışır ve durur.
-setTimeout(function(){
-  console.log("setTimeout")
-},2000)
+// setTimeout(function(){
+//   console.log("setTimeout")
+// },2000)
 
-//belirli bir zaman sonra sonsuz döngüde çalışır.
-setInterval(function(){
-  console.log("setInterval")
-},2000);
+// //belirli bir zaman sonra sonsuz döngüde çalışır.
+// setInterval(function(){
+//   console.log("setInterval")
+// },2000);
 
+//callBackFunction: çoklu işlemlerde kullanılır.
+const birinci = (data) => {
+  console.log(Math.pow(2, data));
+  return data;
+};
 
-//callBackFunction
-const birinci=(data)=>{
-  console.log(Math.pow(2,data));
-  return user;
-}
-
-const ikinci=(callBackFunction)=>{
-  let user=Number(prompt("Lütfen sayı giriniz"));
-  callBackFunction(user);
+const ikinci = (callBackFunction) => {
+  let user = Number(prompt("Lütfen sayı giriniz"));
+  let data = callBackFunction(user);
   console.log(data);
-}
+};
 
-ikinci(birinci)
+//ikinci(birinci);
 
 //promise
+const promTutorial = () => {
+  //catch: 1 tane olmak zorunda
+  let data = new Promise((resolve, reject) => {
+    let status=400;
+    if(status===200){resolve("çalıştı");}
+    else{   reject("çalışmadı");}
+    
+ 
+  })
+    .then(() => {
+      console.log("olumlu");
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
+promTutorial();
+
 //asyn/await
 //dizi , forEach,for, for in, for of, map, filter, fill
 //obje
