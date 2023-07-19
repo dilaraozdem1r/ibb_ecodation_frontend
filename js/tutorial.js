@@ -405,15 +405,15 @@
 //KISS, YAGNI, SOLID, CLEAN CODE, SPAGETTİ CODE, DUMMY CODE bunları araştır.
 
 //Monad : Bir fonksiyonun çıktısı başka bir fonksiyonun girdisi ise buna monad denir.
-const birinci=()=>{
-let user=Number(prompt("Lütfen sayı giriniz"));
-return user;
-}
-const ikinci=()=>{
-let data=birinci();
-console.log(Math.sqrt(data));
-}
-ikinci();
+// const birinci=()=>{
+// let user=Number(prompt("Lütfen sayı giriniz"));
+// return user;
+// }
+// const ikinci=()=>{
+// let data=birinci();
+// console.log(Math.sqrt(data));
+// }
+// ikinci();
 
 //setTimeOut, setInterval()
 
@@ -427,9 +427,24 @@ setInterval(function(){
   console.log("setInterval")
 },2000);
 
+
 //callBackFunction
+const birinci=(data)=>{
+  console.log(Math.pow(2,data));
+  return user;
+}
+
+const ikinci=(callBackFunction)=>{
+  let user=Number(prompt("Lütfen sayı giriniz"));
+  callBackFunction(user);
+  console.log(data);
+}
+
+ikinci(birinci)
+
+//promise
 //asyn/await
-//dizi , forEach, map, filter
+//dizi , forEach,for, for in, for of, map, filter, fill
 //obje
 //dom
 //jquery ajax GET/POST
