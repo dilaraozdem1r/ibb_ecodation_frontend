@@ -445,11 +445,12 @@ const ikinci = (callBackFunction) => {
 const promTutorial = () => {
   //catch: 1 tane olmak zorunda
   let data = new Promise((resolve, reject) => {
-    let status=400;
-    if(status===200){resolve("çalıştı");}
-    else{   reject("çalışmadı");}
-    
- 
+    let status = 400;
+    if (status === 200) {
+      resolve("çalıştı");
+    } else {
+      reject("çalışmadı");
+    }
   })
     .then(() => {
       console.log("olumlu");
@@ -460,47 +461,63 @@ const promTutorial = () => {
 };
 promTutorial();
 
-
 //asyn/await
 
-//dizi , forEach,for, for in, for of, map, filter, fill
-let arr=() =>{
-  const numbers=[5,6,3,11,66]
+//dizi , forEach,for, for in, for of
+let arr = () => {
+  const numbers = [5, 6, 3, 11, 66];
   return numbers;
-}
+};
 
-
-let arrResult=()=>{
-  let data=arr();
+let arrResult = () => {
+  let data = arr();
   console.log(data);
-  console.log(data[data.length-1]);
+  console.log(data[data.length - 1]);
 
   //Iterative For Loop
-  for(let i=0;i<data.length;i++){
-    document.write(data[i]+ " ");
+  for (let i = 0; i < data.length; i++) {
+    document.write(data[i] + " ");
   }
 
   document.writeln("<br/>");
 
-  //for in 
-  for(let i in data){
-    document.write(i + "=>" + data[i]+ " ");
-  } 
+  //for in
+  for (let i in data) {
+    document.write(i + "=>" + data[i] + " ");
+  }
   document.writeln("<br/>");
 
   // for of
-  for(let i of data){
-    document.write(i +" ");
-  } 
+  for (let i of data) {
+    document.write(i + " ");
+  }
 
   document.writeln("<br/>");
-  
-  //ForEach
-  data.forEach((item)=>{
-    document.write(item +" ");
-  })
 
-}
+  //ForEach
+  data.forEach(function (value, index, array) {
+    document.write(`${index}=>  ${value} <br/> `);
+  });
+
+  // filter
+
+  let result1 = data
+    .filter((value, index, array) => {
+      return value % 2 == 0;
+    })
+    .forEach((value, index, array) => {
+      document.write(`${index}=>  ${value} <br/> `);
+    });
+  console.log(result1);
+
+  // map
+  data.map((value,index,array)=>{
+    return value+10;
+  }).forEach((value,index,array)=>{
+    document.write(`${index}=>${value} <br/>`)	
+  })
+  
+};
 arrResult();
 
 //FIFO, LIFO NEDİR ?
