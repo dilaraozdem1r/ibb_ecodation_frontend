@@ -538,8 +538,34 @@ let arr = () => {
 };
 arrResult();
 
-//FIFO, LIFO NEDİR ?
+
+//call back function promise örneği
+let callbackFunctionComputer= ()=>{
+
+  //dizi objesi içerisinde 5 tane random obje
+  const computerArray=[{
+    computerName: "callback computer 1",
+    price:100
+  },
+  {
+    computerName: "callback computer 2",
+    price:200
+  },
+  {
+    computerName: "callback computer 3",
+    price:300
+  }];
+
+
+
+
+}
+callbackFunctionComputer();
 
 //obje
+//event
+//listener
 //dom
+//localStorage
+//KDV hesaplaması
 //jquery ajax GET/POST
