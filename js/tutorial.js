@@ -464,13 +464,13 @@ const ikinci = (callBackFunction) => {
 // //asyn/await
 
 // //dizi , forEach,for, for in, for of
-let arr = () => {
-  const numbers = [5, 6, 3, 11, 66];
-  return numbers;
-};
+// let arr = () => {
+//   const numbers = [5, 6, 3, 11, 66];
+//   return numbers;
+// };
 
- let arrResult = () => {
-   let data = arr();
+//  let arrResult = () => {
+//    let data = arr();
 //   console.log(data);
 //   console.log(data[data.length - 1]);
 
@@ -494,72 +494,82 @@ let arr = () => {
 
 //   document.writeln("<br/>");
 
-  //ForEach
-  // data.forEach(function (value, index, array) {
-  //   document.write(`${index}=>  ${value} <br/> `);
-  // });
+//ForEach
+// data.forEach(function (value, index, array) {
+//   document.write(`${index}=>  ${value} <br/> `);
+// });
 
-  // filter
+// filter
 
-  // let result1 = data
-  //   .filter((value, index, array) => {
-  //     return value % 2 == 0;
-  //   })
-  //   .forEach((value, index, array) => {
-  //     document.write(`${index}=>  ${value} <br/> `);
-  //   });
-  // console.log(result1);
+// let result1 = data
+//   .filter((value, index, array) => {
+//     return value % 2 == 0;
+//   })
+//   .forEach((value, index, array) => {
+//     document.write(`${index}=>  ${value} <br/> `);
+//   });
+// console.log(result1);
 
-  // map
-  // data.map((value,index,array)=>{
-  //   return value+10;
-  // }).forEach((value,index,array)=>{
-  //   document.write(`${index}=>${value} <br/>`)	
-  // })
+// map
+// data.map((value,index,array)=>{
+//   return value+10;
+// }).forEach((value,index,array)=>{
+//   document.write(`${index}=>${value} <br/>`)
+// })
 
-  document.writeln("eleman sayısı: " + data.length);
-  data.push(99);
-  data.unshift(44);
+//   document.writeln("eleman sayısı: " + data.length);
+//   data.push(99);
+//   data.unshift(44);
 
-  data.pop(); //sonda 1 eleman çıkar
-  data.shift(); 
-  console.log(data)
+//   data.pop(); //sonda 1 eleman çıkar
+//   data.shift();
+//   console.log(data)
 
-  //data.sort();
+//   //data.sort();
 
-  // data.reverse();  
-  data.sort().reverse();
-  console.log(data);
-  console.log(data.toString().substring(0,2));
+//   // data.reverse();
+//   data.sort().reverse();
+//   console.log(data);
+//   console.log(data.toString().substring(0,2));
 
-  //splice, slice
+//   //splice, slice
 
-  
-};
-arrResult();
-
+// };
+// arrResult();
 
 //call back function promise örneği
-let callbackFunctionComputer= ()=>{
-
+let callbackFunctionComputer = () => {
   //dizi objesi içerisinde 5 tane random obje
-  const computerArray=[{
-    computerName: "callback computer 1",
-    price:100
-  },
-  {
-    computerName: "callback computer 2",
-    price:200
-  },
-  {
-    computerName: "callback computer 3",
-    price:300
-  }];
+  let computerArray = [];
 
+  for (let index = 0; index < 5; index++) {
+    let computerObject = {
+      computerName: `computer ${index + 1}`,
+      price: `${index + 1}` * `${Number(100)}`,
+    };
+    computerArray.push(computerObject);
+  }
+  console.log(computerArray);
 
+  //bu dizi içerisindeki sadece computer name bileşenlerini göster.
 
+  const arrayInComputerName = () => {
+    computerArray.map((temp) => {
+      console.log(`${temp.computerName}`);
+    });
+  };
+  arrayInComputerName();
 
-}
+  //call back function price
+  const arrayInComputerObject = (price, callBackFnc) => {
+    computerObject.push(price);
+    callBackFnc();
+
+  }
+
+  arrayInComputerObject({computerName:"computer 6",price:"600"},arrayInComputerName);
+
+};
 callbackFunctionComputer();
 
 //obje
