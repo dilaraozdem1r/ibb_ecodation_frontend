@@ -538,81 +538,121 @@ const ikinci = (callBackFunction) => {
 // arrResult();
 
 //call back function promise örneği
-let callbackFunctionComputer = () => {
-  //dizi objesi içerisinde 5 tane random obje
-  let computerArray = [];
+// let callbackFunctionComputer = () => {
+//   //dizi objesi içerisinde 5 tane random obje
+//   let computerArray = [];
 
-  for (let index = 0; index < 5; index++) {
-    let computerObject = {
-      computerName: `computer ${index + 1}`,
-      price: `${index + 1}` * `${Number(100)}`,
-    };
-    computerArray.push(computerObject);
+//   for (let index = 0; index < 5; index++) {
+//     let computerObject = {
+//       computerName: `computer ${index + 1}`,
+//       price: `${index + 1}` * `${Number(100)}`,
+//     };
+//     computerArray.push(computerObject);
+//   }
+//   console.log(computerArray);
+
+//   //bu dizi içerisindeki sadece computer name bileşenlerini göster.
+
+//   const arrayInComputerName = () => {
+//     computerArray.map((temp) => {
+//       console.log(`${temp.computerName}`);
+//     });
+//   };
+//   arrayInComputerName();
+
+//   //call back function price
+//   const arrayInComputerObject = (obj, callBackFnc) => {
+//     computerObject.push(obj);
+//     callBackFnc();
+//   };
+
+//   arrayInComputerObject(
+//     { computerName: "computer 6", price: "600" },
+//     arrayInComputerName
+//   );
+// };
+// callbackFunctionComputer();
+
+// //promise function promise örneği
+// let promiseFunctionComputer = () => {
+//   //dizi objesi içerisinde 5 tane random obje
+//   let computerArray = [];
+
+//   for (let index = 0; index < 5; index++) {
+//     let computerObject = {
+//       computerName: `computer ${index + 1}`,
+//       price: `${index + 1}` * `${Number(100)}`,
+//     };
+//     computerArray.push(computerObject);
+//   }
+//   console.log(computerArray);
+
+//   //bu dizi içerisindeki sadece computer name bileşenlerini göster.
+
+//   const arrayInComputerName = () => {
+//     computerArray.map((temp) => {
+//       console.log(`${temp.computerName}`);
+//     });
+//   };
+//   arrayInComputerName();
+
+//   //promise function price
+//   const arrayInComputerObject = (obj, callBackFnc) => {
+//     const promiseReturn = new Promise(() => {
+//       computerObject.push(obj);
+//     });
+//     callBackFnc();
+//   };
+
+//   arrayInComputerObject({ computerName: "computer 6", price: "600" })
+//     .then((response) => {console.log(response)})
+//     .catch((err) => {
+//       console.error(err);
+//     });
+// };
+// promiseFunctionComputer();
+
+//object
+const objectTutorials=()=>{
+const personObj={
+  "name":"Hamit",
+  "surname":"Mızrak",
+  "number":44,
+  "isLogin":true,
+  "software":["html5","css3","js","react","angular","vue"],
+  fullName:function(){
+    return this.name+ " "+ this.surname;
   }
-  console.log(computerArray);
+}
+console.log(personObj)
+//variable
+console.log(personObj.name);
+console.log(personObj.surname)
 
-  //bu dizi içerisindeki sadece computer name bileşenlerini göster.
+//variable nested
+console.log(personObj["name"]);
+console.log(personObj["surname"]);
 
-  const arrayInComputerName = () => {
-    computerArray.map((temp) => {
-      console.log(`${temp.computerName}`);
-    });
-  };
-  arrayInComputerName();
+//array
+console.log(personObj.software[0]);
 
-  //call back function price
-  const arrayInComputerObject = (obj, callBackFnc) => {
-    computerObject.push(obj);
-    callBackFnc();
-  };
+const objectToString=JSON.stringify(personObj);
+console.log(objectToString);
 
-  arrayInComputerObject(
-    { computerName: "computer 6", price: "600" },
-    arrayInComputerName
-  );
-};
-callbackFunctionComputer();
+const stringToObject=JSON.parse(objectToString);
+console.log(stringToObject);
 
-//promise function promise örneği
-let promiseFunctionComputer = () => {
-  //dizi objesi içerisinde 5 tane random obje
-  let computerArray = [];
+//Object variable
+personObj.language="english";
+console.log(personObj.language);
 
-  for (let index = 0; index < 5; index++) {
-    let computerObject = {
-      computerName: `computer ${index + 1}`,
-      price: `${index + 1}` * `${Number(100)}`,
-    };
-    computerArray.push(computerObject);
-  }
-  console.log(computerArray);
+//function callback
+console.log(personObj.fullName());
 
-  //bu dizi içerisindeki sadece computer name bileşenlerini göster.
+}
+objectTutorials();
+//ödev: JSON nedir, XML nedir, aralarındaki fark nedir?
 
-  const arrayInComputerName = () => {
-    computerArray.map((temp) => {
-      console.log(`${temp.computerName}`);
-    });
-  };
-  arrayInComputerName();
-
-  //promise function price
-  const arrayInComputerObject = (obj, callBackFnc) => {
-    const promiseReturn = new Promise(() => {
-      computerObject.push(obj);
-    });
-    callBackFnc();
-  };
-
-  arrayInComputerObject({ computerName: "computer 6", price: "600" })
-    .then((response) => {console.log(response)})
-    .catch((err) => {
-      console.error(err);
-    });
-};
-promiseFunctionComputer();
-
-//obje
 //event
 //listener
 //dom
