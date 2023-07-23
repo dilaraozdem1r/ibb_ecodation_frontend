@@ -712,6 +712,7 @@ parameterCallApplyBind();
 //listener
 //dom
 //localStorage
+//jquery ajax GET/POST
 //KDV hesaplaması
 //REACT
 //jquery ajax GET/POST
