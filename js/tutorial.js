@@ -668,6 +668,26 @@ console.log(personResult);
 }
 objectConstructor();
 
+//call, apply, bind
+
+let noParameterCallApplyBind=()=>{
+
+  //function
+let functionOtherObject=()=>{
+  document.writeln(`Parametresiz Functioon: ${this.adi} </br>`)
+}
+
+//object
+let objectData={
+  "adi":"spora gidiyorum",
+};
+functionOtherObject.call(objectData);
+functionOtherObject.apply(objectData);
+let deneme=functionOtherObject.bind(objectData);
+deneme();
+}
+noParameterCallApplyBind
+
 //event
 //listener
 //dom
