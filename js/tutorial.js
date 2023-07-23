@@ -561,16 +561,56 @@ let callbackFunctionComputer = () => {
   arrayInComputerName();
 
   //call back function price
-  const arrayInComputerObject = (price, callBackFnc) => {
-    computerObject.push(price);
+  const arrayInComputerObject = (obj, callBackFnc) => {
+    computerObject.push(obj);
     callBackFnc();
+  };
 
-  }
-
-  arrayInComputerObject({computerName:"computer 6",price:"600"},arrayInComputerName);
-
+  arrayInComputerObject(
+    { computerName: "computer 6", price: "600" },
+    arrayInComputerName
+  );
 };
 callbackFunctionComputer();
+
+//promise function promise örneği
+let promiseFunctionComputer = () => {
+  //dizi objesi içerisinde 5 tane random obje
+  let computerArray = [];
+
+  for (let index = 0; index < 5; index++) {
+    let computerObject = {
+      computerName: `computer ${index + 1}`,
+      price: `${index + 1}` * `${Number(100)}`,
+    };
+    computerArray.push(computerObject);
+  }
+  console.log(computerArray);
+
+  //bu dizi içerisindeki sadece computer name bileşenlerini göster.
+
+  const arrayInComputerName = () => {
+    computerArray.map((temp) => {
+      console.log(`${temp.computerName}`);
+    });
+  };
+  arrayInComputerName();
+
+  //promise function price
+  const arrayInComputerObject = (obj, callBackFnc) => {
+    const promiseReturn = new Promise(() => {
+      computerObject.push(obj);
+    });
+    callBackFnc();
+  };
+
+  arrayInComputerObject({ computerName: "computer 6", price: "600" })
+    .then((response) => {console.log(response)})
+    .catch((err) => {
+      console.error(err);
+    });
+};
+promiseFunctionComputer();
 
 //obje
 //event
