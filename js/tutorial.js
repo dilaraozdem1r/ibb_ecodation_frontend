@@ -669,11 +669,12 @@ console.log(personResult);
 objectConstructor();
 
 //call, apply, bind
+//odev: anonymous function ile arrow function farkı?
 
 let noParameterCallApplyBind=()=>{
 
   //function
-let functionOtherObject=()=>{
+let functionOtherObject=function(){
   document.writeln(`Parametresiz Functioon: ${this.adi} </br>`)
 }
 
@@ -686,7 +687,26 @@ functionOtherObject.apply(objectData);
 let deneme=functionOtherObject.bind(objectData);
 deneme();
 }
-noParameterCallApplyBind
+noParameterCallApplyBind();
+document.writeln("<br/>");
+
+let parameterCallApplyBind=()=>{
+
+  //function
+let functionOtherObject=function(surname){
+  document.writeln(`Parametreli Functioon: ${this.adi} => ${surname} </br>`)
+}
+
+//object
+let objectData={
+  "adi":"spora gidiyorum",
+};
+functionOtherObject.call(objectData, "Mızrak");
+functionOtherObject.apply(objectData, ["Mızrak"]);
+let deneme=functionOtherObject.bind(objectData,"Mızrak");
+deneme();
+}
+parameterCallApplyBind();
 
 //event
 //listener
