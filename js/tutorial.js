@@ -650,14 +650,28 @@ console.log(personObj.language);
 console.log(personObj.fullName());
 
 }
-objectTutorials();
+// objectTutorials();
 //ödev: JSON nedir, XML nedir, aralarındaki fark nedir?
 
 //object constructor
+let objectConstructor=()=>{
+
+let personConstructor=function(name,surname){
+  this.name=name;
+  this.surname=surname;
+  console.log(this);
+}
+
+let personResult=new personConstructor("Hamit","Mızrak");
+console.log(personResult);
+
+}
+objectConstructor();
 
 //event
 //listener
 //dom
 //localStorage
 //KDV hesaplaması
+//REACT
 //jquery ajax GET/POST
