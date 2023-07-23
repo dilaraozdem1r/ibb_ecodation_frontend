@@ -653,6 +653,8 @@ console.log(personObj.fullName());
 objectTutorials();
 //ödev: JSON nedir, XML nedir, aralarındaki fark nedir?
 
+//object constructor
+
 //event
 //listener
 //dom
