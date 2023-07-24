@@ -717,6 +717,18 @@ let eventFunction=()=>{
 //listener
 
 //dom
+let newDataDate=()=>{
+  let now=document.getElementById("text_data");
+  //HTML
+  // now.innerHTML="<b> <i> <mark>" +new Date().getFullYear()+"</b></i></mark>";
+  //now.innerHTML=`<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
+
+  //TEXT
+  //now.innerText= `<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
+  now.innerText= new Date().getFullYear();
+
+};
+
 //localStorage
 //jquery ajax GET/POST
 //KDV hesaplaması
