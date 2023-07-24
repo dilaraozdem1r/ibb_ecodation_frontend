@@ -767,6 +767,27 @@ let userListener=()=>{
 userListener();
 
 //localStorage
+//veriler bizim için önemli. 
+//verileri saklarız. database, browser, cookie, session, localstorage, sessionstorage
+
+let localStorageData=()=>{
+
+  const adı=localStorage.setItem("name","Hamit");
+  const soyadi=localStorage.setItem("surname","Mızrak");
+  console.log(localStorage);
+
+  const getAdi=localStorage.getItem("name");
+  alert(getAdi);
+
+  //remove Item
+  localStorage.removeItem("name");
+
+  //clear
+  localStorage.clear();
+
+}
+//localStorageData();
+
 //jquery ajax GET/POST
 //KDV hesaplaması
 //REACT
