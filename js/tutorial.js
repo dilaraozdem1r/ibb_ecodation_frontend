@@ -613,103 +613,109 @@ const ikinci = (callBackFunction) => {
 // promiseFunctionComputer();
 
 //object
-const objectTutorials=()=>{
-const personObj={
-  "name":"Hamit",
-  "surname":"Mızrak",
-  "number":44,
-  "isLogin":true,
-  "software":["html5","css3","js","react","angular","vue"],
-  fullName:function(){
-    return this.name+ " "+ this.surname;
-  }
-}
-console.log(personObj)
-//variable
-console.log(personObj.name);
-console.log(personObj.surname)
+// const objectTutorials=()=>{
+// const personObj={
+//   "name":"Hamit",
+//   "surname":"Mızrak",
+//   "number":44,
+//   "isLogin":true,
+//   "software":["html5","css3","js","react","angular","vue"],
+//   fullName:function(){
+//     return this.name+ " "+ this.surname;
+//   }
+// }
+// console.log(personObj)
+// //variable
+// console.log(personObj.name);
+// console.log(personObj.surname)
 
-//variable nested
-console.log(personObj["name"]);
-console.log(personObj["surname"]);
+// //variable nested
+// console.log(personObj["name"]);
+// console.log(personObj["surname"]);
 
-//array
-console.log(personObj.software[0]);
+// //array
+// console.log(personObj.software[0]);
 
-const objectToString=JSON.stringify(personObj);
-console.log(objectToString);
+// const objectToString=JSON.stringify(personObj);
+// console.log(objectToString);
 
-const stringToObject=JSON.parse(objectToString);
-console.log(stringToObject);
+// const stringToObject=JSON.parse(objectToString);
+// console.log(stringToObject);
 
-//Object variable
-personObj.language="english";
-console.log(personObj.language);
+// //Object variable
+// personObj.language="english";
+// console.log(personObj.language);
 
-//function callback
-console.log(personObj.fullName());
+// //function callback
+// console.log(personObj.fullName());
 
-}
-// objectTutorials();
-//ödev: JSON nedir, XML nedir, aralarındaki fark nedir?
+// }
+// // objectTutorials();
+// //ödev: JSON nedir, XML nedir, aralarındaki fark nedir?
 
-//object constructor
-let objectConstructor=()=>{
+// //object constructor
+// let objectConstructor=()=>{
 
-let personConstructor=function(name,surname){
-  this.name=name;
-  this.surname=surname;
-  console.log(this);
-}
+// let personConstructor=function(name,surname){
+//   this.name=name;
+//   this.surname=surname;
+//   console.log(this);
+// }
 
-let personResult=new personConstructor("Hamit","Mızrak");
-console.log(personResult);
+// let personResult=new personConstructor("Hamit","Mızrak");
+// console.log(personResult);
 
-}
-objectConstructor();
+// }
+// objectConstructor();
 
-//call, apply, bind
-//odev: anonymous function ile arrow function farkı?
+// //call, apply, bind
+// //odev: anonymous function ile arrow function farkı?
 
-let noParameterCallApplyBind=()=>{
+// let noParameterCallApplyBind=()=>{
 
-  //function
-let functionOtherObject=function(){
-  document.writeln(`Parametresiz Functioon: ${this.adi} </br>`)
-}
+//   //function
+// let functionOtherObject=function(){
+//   document.writeln(`Parametresiz Functioon: ${this.adi} </br>`)
+// }
 
-//object
-let objectData={
-  "adi":"spora gidiyorum",
-};
-functionOtherObject.call(objectData);
-functionOtherObject.apply(objectData);
-let deneme=functionOtherObject.bind(objectData);
-deneme();
-}
-noParameterCallApplyBind();
-document.writeln("<br/>");
+// //object
+// let objectData={
+//   "adi":"spora gidiyorum",
+// };
+// functionOtherObject.call(objectData);
+// functionOtherObject.apply(objectData);
+// let deneme=functionOtherObject.bind(objectData);
+// deneme();
+// }
+// noParameterCallApplyBind();
+// document.writeln("<br/>");
 
-let parameterCallApplyBind=()=>{
+// let parameterCallApplyBind=()=>{
 
-  //function
-let functionOtherObject=function(surname){
-  document.writeln(`Parametreli Functioon: ${this.adi} => ${surname} </br>`)
-}
+//   //function
+// let functionOtherObject=function(surname){
+//   document.writeln(`Parametreli Functioon: ${this.adi} => ${surname} </br>`)
+// }
 
-//object
-let objectData={
-  "adi":"spora gidiyorum",
-};
-functionOtherObject.call(objectData, "Mızrak");
-functionOtherObject.apply(objectData, ["Mızrak"]);
-let deneme=functionOtherObject.bind(objectData,"Mızrak");
-deneme();
-}
-parameterCallApplyBind();
+// //object
+// let objectData={
+//   "adi":"spora gidiyorum",
+// };
+// functionOtherObject.call(objectData, "Mızrak");
+// functionOtherObject.apply(objectData, ["Mızrak"]);
+// let deneme=functionOtherObject.bind(objectData,"Mızrak");
+// deneme();
+// }
+// parameterCallApplyBind();
 
 //event
+let eventFunction=()=>{
+  alert( "deneme")
+}
+
+
 //listener
+
 //dom
 //localStorage
 //jquery ajax GET/POST
