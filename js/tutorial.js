@@ -714,7 +714,7 @@ let eventFunction=()=>{
 }
 
 
-//listener
+
 
 //dom
 let newDataDate=()=>{
@@ -722,6 +722,9 @@ let newDataDate=()=>{
   //HTML
   // now.innerHTML="<b> <i> <mark>" +new Date().getFullYear()+"</b></i></mark>";
   //now.innerHTML=`<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
+
+  //QUERYSELECTOR , id=># , class=>.
+  let now2=document.querySelector("#text_data");
 
   //TEXT
   //now.innerText= `<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
@@ -744,9 +747,24 @@ let domData2=()=>{
   //let domUserData=document.getElementsByTagName("p")[1].innerText="Tag name data";
 }
 
+let outSite=()=>{
+let userInformation=
+  window.confirm("Çıkmak istediğinize emin misiniz?") 
+    ? window.location="https:www.ecodation.com"
+    : window.alert("Çıkış işlemi iptal edildi");
 
+}
 
-
+//listener
+let userListener=()=>{
+  let listenerParag=document.getElementById("parag_list");
+  listenerParag.addEventListener("click",function(e){
+    // alert(e.preventDefault()+ " " + e.target);
+    // document.getElementById("log_admin").innerHTML="takip edildi";
+    $("#log_admin").html("takip edildi");
+  })
+}
+userListener();
 
 //localStorage
 //jquery ajax GET/POST
