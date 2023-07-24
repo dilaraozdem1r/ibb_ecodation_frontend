@@ -727,7 +727,26 @@ let newDataDate=()=>{
   //now.innerText= `<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
   now.innerText= new Date().getFullYear();
 
+  //CSS
+  now.style.color="purple";
+  now.style.backgroundColor="yellow";
+  now.style.padding="10px";
 };
+
+let domData2=()=>{
+  //ID
+  //let domUserData=document.getElementById("dom_id").innerText="ID";
+
+  //Class
+  //let domUserData=document.getElementsByClassName("dom_class")[0].innerText="Class data";
+
+  //Tag name
+  //let domUserData=document.getElementsByTagName("p")[1].innerText="Tag name data";
+}
+
+
+
+
 
 //localStorage
 //jquery ajax GET/POST
