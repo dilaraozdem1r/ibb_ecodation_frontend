@@ -756,15 +756,15 @@ let userInformation=
 }
 
 //listener
-let userListener=()=>{
-  let listenerParag=document.getElementById("parag_list");
-  listenerParag.addEventListener("click",function(e){
-   alert(e.preventDefault()+ " " + e.target);
- document.getElementById("log_admin").innerHTML="takip edildi";
-    // $("#log_admin").html("takip edildi");
-  })
-}
-userListener();
+// let userListener=()=>{
+//   let listenerParag=document.getElementById("parag_list");
+//   listenerParag.addEventListener("click",function(e){
+//    alert(e.preventDefault()+ " " + e.target);
+//  document.getElementById("log_admin").innerHTML="takip edildi";
+//     // $("#log_admin").html("takip edildi");
+//   })
+// }
+// userListener();
 
 //localStorage
 //veriler bizim için önemli. 
@@ -788,7 +788,43 @@ let localStorageData=()=>{
 }
 //localStorageData();
 
-//jquery ajax GET/POST
-//KDV hesaplaması
+
+
+//jQuery
+
+//Jquery hangi tuşa bastığımı söylesin
+
+let userJqueryKey=()=>{
+  //jquery hazırlanması
+  $(document).ready(function(){
+    $(document).keydown(function(userButton){
+      console.log(userButton);
+      console.log(userButton.keyCode);
+      //keycode (13 )=> enter
+
+      //browser sen bir şey yapma, yaparsam ben yaparım
+      userButton.preventDefault();
+    
+        // ENTER BASILDI
+        if(userButton.keyCode==13){
+          alert("ENTER bastınız");
+          console.log("ENTER bastınız");
+        }
+      
+    })//end keydown
+  }); //end document ready
+ 
+} //end userJqueryKey
+userJqueryKey();
+
+//VKI (LocalStorage)
+
+
+//jquery ajax GET/POST (Backend: Java API)
+//Dockerfile
+
+//Login Validation
+//KDV hesaplaması: JS ve React ile yapılacak
+
 //REACT
-//jquery ajax GET/POST
+
