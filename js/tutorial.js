@@ -831,7 +831,24 @@ const ikinci = (callBackFunction) => {
 
 //VKI butonu olsun. bu butona basılınca form açılsın.
 
+$(document).ready(function () {
+  let vkiFormule = () => {
 
+      //EVENT
+      $("#vki_submit_id").click(function () {
+          // Boy ve Kilo
+          let weight, height;
+          weight = jQuery.trim($("#weight_id").val());
+          alert(weight);
+
+          height = jQuery.trim($("#height_id").val());
+          alert(height)
+
+      }); // click
+
+  } //end vkiFormule
+  vkiFormule()
+});
 
 
 
