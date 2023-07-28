@@ -713,9 +713,6 @@ const ikinci = (callBackFunction) => {
 //   alert( "deneme")
 // }
 
-
-
-
 //dom
 // let newDataDate=()=>{
 //   let now=document.getElementById("text_data");
@@ -749,7 +746,7 @@ const ikinci = (callBackFunction) => {
 
 // let outSite=()=>{
 // let userInformation=
-//   window.confirm("Çıkmak istediğinize emin misiniz?") 
+//   window.confirm("Çıkmak istediğinize emin misiniz?")
 //     ? window.location="https:www.ecodation.com"
 //     : window.alert("Çıkış işlemi iptal edildi");
 
@@ -767,7 +764,7 @@ const ikinci = (callBackFunction) => {
 // userListener();
 
 //localStorage
-//veriler bizim için önemli. 
+//veriler bizim için önemli.
 //verileri saklarız. database, browser, cookie, session, localstorage, sessionstorage
 
 // let localStorageData=()=>{
@@ -788,8 +785,6 @@ const ikinci = (callBackFunction) => {
 // }
 //localStorageData();
 
-
-
 //jQuery
 
 //Jquery hangi tuşa bastığımı söylesin
@@ -804,25 +799,25 @@ const ikinci = (callBackFunction) => {
 
 //       //browser sen bir şey yapma, yaparsam ben yaparım
 //       userButton.preventDefault();
-    
-//         // if(userButton.ctrlKey){}  //Ctrl basılarak mı tıklanmış 
+
+//         // if(userButton.ctrlKey){}  //Ctrl basılarak mı tıklanmış
 //         // ENTER BASILDI
 //         if(userButton.keyCode==13){ // keycode: her karakterin sayısal karşılığı
 //           alert("ENTER bastınız");
 //           console.log("ENTER bastınız");
 //         }
-      
+
 //     })//end keydown
 //   }); //end document ready
- 
+
 // } //end userJqueryKey
 // userJqueryKey();
 
 //VKI (LocalStorage)
 //Vücut Kitle Index(VKI)
 //kullanıcıdan alınan kilo ve boy verileri formda inputtan aldıktan sonra
-//Formül: Kilo/(Boy/100)^2	
-//eğer bu formülde 
+//Formül: Kilo/(Boy/100)^2
+//eğer bu formülde
 //VKI<18 ise düşük kilolu (Doktora gidiniz)
 //VKI>=18 && VKI<=24 ise normal kilolu
 //VKI>=24 ve VKI <29 ise fazla kilolu
@@ -832,121 +827,124 @@ const ikinci = (callBackFunction) => {
 //VKI butonu olsun. bu butona basılınca form açılsın.
 
 let vkiFormule = () => {
+  $(document).ready(function () {
+    // EVENT
+    $("#vki_submit_id").click(function (event) {
+      event.preventDefault();
+      // Boy ve Kilo
+      let weight, height, vkiResult;
 
-  $(document).ready(function() {
-      // EVENT
-      $("#vki_submit_id").click(function(event) {
-        event.preventDefault();
-          // Boy ve Kilo
-          let weight, height, vkiResult;
+      // Local Storage
+      let getLocalWeight,
+        getLocalHeight,
+        getLocalVkiNumberResult,
+        getLocalVkiResult;
 
-         // Local Storage
-         let getLocalWeight, getLocalHeight,getLocalVkiNumberResult,getLocalVkiResult;
-
-          // KİLO
-          weight = jQuery.trim($("#weight_id").val());
-          // alert(weight);
-          // validation
-          if(weight==""){
-              $('#validation_weight').html("Kilosu boş geçilemez");
-          } else if (jQuery.isNumeric(weight) == false) {
-            // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
-           $('#validation_weight').html("Sayı girmelisiniz");
-       }else {
+      // KİLO
+      weight = jQuery.trim($("#weight_id").val());
+      // alert(weight);
+      // validation
+      if (weight == "") {
+        $("#validation_weight").html("Kilosu boş geçilemez");
+      } else if (jQuery.isNumeric(weight) == false) {
+        // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+        $("#validation_weight").html("Sayı girmelisiniz");
+      } else {
         // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
         localStorage.setItem("weight", weight);
         console.log(localStorage);
         getLocalWeight = localStorage.getItem("weight");
-        console.log(`Local Weight:  ${getLocalWeight}`); 
-        getLocalWeight=Number(getLocalWeight);
+        console.log(`Local Weight:  ${getLocalWeight}`);
+        getLocalWeight = Number(getLocalWeight);
       }
 
-       // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+      // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
 
-          // eğer input içinde değer varsa hata mesajı silinsin.
-          // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
-          // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
+      // eğer input içinde değer varsa hata mesajı silinsin.
+      // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+      // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
 
-
-           
-          // BOY
-          height = jQuery.trim($("#height_id").val());
-          //alert(height);
-          // validation
-          if(height==""){
-              $('#validation_height').html("Boy boş geçilemez");
-          }else if ($.isNumeric(weight) == false) {
-            // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
-           $('#validation_weight').html("Sayı girmelisiniz");
-       }else {
+      // BOY
+      height = jQuery.trim($("#height_id").val());
+      //alert(height);
+      // validation
+      if (height == "") {
+        $("#validation_height").html("Boy boş geçilemez");
+      } else if ($.isNumeric(weight) == false) {
+        // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+        $("#validation_weight").html("Sayı girmelisiniz");
+      } else {
         // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
         localStorage.setItem("height", height);
         getLocalHeight = localStorage.getItem("height");
         console.log(`Local Height:  ${getLocalHeight}`);
-        getLocalHeight=Number(getLocalHeight);
-    }
+        getLocalHeight = Number(getLocalHeight);
+      }
 
+      // eğer input içinde değer varsa hata mesajı silinsin.
 
+      //FORMÜL
+      vkiNumberResult = Math.round(
+        getLocalWeight / Math.pow(getLocalHeight / 100, 2)
+      );
+      localStorage.setItem("vkiNumberResult", vkiNumberResult);
+      console.log(`Local VKI Result:  ${vkiResult}`);
+      getLocalVkiNumberResult = localStorage.getItem("vkiNumberResult");
 
-          // eğer input içinde değer varsa hata mesajı silinsin.
-      
-          //FORMÜL
-          vkiNumberResult = Math.round(getLocalWeight / Math.pow((getLocalHeight / 100),2));
-          localStorage.setItem("vkiNumberResult", vkiNumberResult);
-          console.log(`Local VKI Result:  ${vkiResult}`);
-          getLocalVkiNumberResult = localStorage.getItem("vkiNumberResult");
+      //display result
 
-          //display result
+      //switch-case : ödev
+      if (getLocalVkiNumberResult < 18) {
+        $("#result_vki_id")
+          .html(`<b><i>${getLocalVkiNumberResult}: Düşük Kilolu</i></b>`)
+          .css("color", "red");
+        localStorage.setItem("vkiResult", "düşük kilolu");
+      } else if (
+        getLocalVkiNumberResult >= 18 &&
+        getLocalVkiNumberResult < 24
+      ) {
+        $("#result_vki_id")
+          .html(`<b><i>${getLocalVkiNumberResult}: Normal Kilolu</i></b>`)
+          .css("color", "green");
+        localStorage.setItem("vkiResult", "Normal Kilolu");
+      } else if (
+        getLocalVkiNumberResult >= 24 &&
+        getLocalVkiNumberResult < 29
+      ) {
+        $("#result_vki_id")
+          .html(`<b><i>${getLocalVkiNumberResult}: Fazla Kilolu</i></b>`)
+          .css("color", "orange");
+        localStorage.setItem("vkiResult", "fazla kilolu");
+      } else if (
+        getLocalVkiNumberResult >= 29 &&
+        getLocalVkiNumberResult < 32
+      ) {
+        $("#result_vki_id")
+          .html(`<b><i>${getLocalVkiNumberResult}: Obez Kilolu</i></b>`)
+          .css("color", "orange");
+        localStorage.setItem("vkiResult", "obez kilolu");
+      } else if (getLocalVkiNumberResult >= 32) {
+        $("#result_vki_id")
+          .html(`<b><i>${getLocalVkiNumberResult}: Aşırı Obez Kilolu</i></b>`)
+          .css("color", "red");
+        localStorage.setItem("vkiResult", "aşırı obez kilolu");
+      }
 
-          
-
-          //switch-case : ödev
-          if(getLocalVkiNumberResult<18){
-            $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}: Düşük Kilolu</i></b>`).css("color", "red");
-            localStorage.setItem("vkiResult", "düşük kilolu");
-        
-          }else if(getLocalVkiNumberResult>=18 && getLocalVkiNumberResult<24){
-            $("#result_vki_id").html(`<b><i>${getLocalVkiResult}: Normal Kilolu</i></b>`).css("color", "green");
-            localStorage.setItem("vkiResult", "Normal Kilolu");
-          
-          }
-          else if(getLocalVkiNumberResult>=24 && getLocalVkiNumberResult<29){
-            $("#result_vki_id").html(`<b><i>${getLocalVkiResult}: Fazla Kilolu</i></b>`).css("color", "orange");
-            localStorage.setItem("vkiResult", "fazla kilolu");
-           
-          }
-          else if(getLocalVkiNumberResult>=29 && getLocalVkiNumberResult<32){
-            $("#result_vki_id").html(`<b><i>${getLocalVkiResult}: Obez Kilolu</i></b>`).css("color", "orange");
-            localStorage.setItem("vkiResult", "obez kilolu");
-          }
-           
-          else if(getLocalVkiNumberResult>=32){
-            $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}: Aşırı Obez Kilolu</i></b>`).css("color", "red");
-            localStorage.setItem("vkiResult", "aşırı obez kilolu");
-
-          }
-
-          //local
-          
-      }); // click
-
-  }) // end document ready
-
-  $(document).ready(function() {
-
-    $("#localStorage_clear_id").click(function(event) {
-      event.preventDefault();
-      localStorage.clear();
-    })
-
-  })
-
-
+      //local
+    }); // click
+  }); // end document ready
 };
 vkiFormule();
 
-
-
+let clearLocalStorageData = () => {
+  // alert("Local storage temizlenecek");
+  if (confirm("Emin misiniz?")) {
+    localStorage.clear();
+    alert("silindi");
+  } else {
+    alert("silinmedi");
+  }
+};
 
 //jquery ajax GET/POST (Backend: Java API)
 //Dockerfile
@@ -955,4 +953,3 @@ vkiFormule();
 //KDV hesaplaması: JS ve React ile yapılacak
 
 //REACT
-
