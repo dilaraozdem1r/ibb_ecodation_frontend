@@ -831,24 +831,41 @@ const ikinci = (callBackFunction) => {
 
 //VKI butonu olsun. bu butona basılınca form açılsın.
 
-$(document).ready(function () {
-  let vkiFormule = () => {
+let vkiFormule = () => {
 
-      //EVENT
-      $("#vki_submit_id").click(function () {
+  $(document).ready(function() {
+      // EVENT
+      $("#vki_submit_id").click(function() {
           // Boy ve Kilo
           let weight, height;
-          weight = jQuery.trim($("#weight_id").val());
-          alert(weight);
 
+          // KİLO
+          weight = jQuery.trim($("#weight_id").val());
+          // alert(weight);
+          // validation
+          if(weight==""){
+              $('#validation_weight').html("Kilosu boş geçilemez");
+          } 
+          // eğer input içinde değer varsa hata mesajı silinsin.
+          // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+          // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
+
+          // BOY
           height = jQuery.trim($("#height_id").val());
-          alert(height)
+          //alert(height);
+          // validation
+          if(height==""){
+              $('#validation_height').html("Boy boş geçilemez");
+          }
+          // eğer input içinde değer varsa hata mesajı silinsin.
+          // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+          // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
 
       }); // click
 
-  } //end vkiFormule
-  vkiFormule()
-});
+  }) // end document ready
+};
+vkiFormule();
 
 
 
