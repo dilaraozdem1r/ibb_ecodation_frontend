@@ -709,51 +709,51 @@ const ikinci = (callBackFunction) => {
 // parameterCallApplyBind();
 
 //event
-let eventFunction=()=>{
-  alert( "deneme")
-}
+// let eventFunction=()=>{
+//   alert( "deneme")
+// }
 
 
 
 
 //dom
-let newDataDate=()=>{
-  let now=document.getElementById("text_data");
-  //HTML
-  // now.innerHTML="<b> <i> <mark>" +new Date().getFullYear()+"</b></i></mark>";
-  //now.innerHTML=`<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
+// let newDataDate=()=>{
+//   let now=document.getElementById("text_data");
+//   //HTML
+//   // now.innerHTML="<b> <i> <mark>" +new Date().getFullYear()+"</b></i></mark>";
+//   //now.innerHTML=`<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
 
-  //QUERYSELECTOR , id=># , class=>.
-  let now2=document.querySelector("#text_data");
+//   //QUERYSELECTOR , id=># , class=>.
+//   let now2=document.querySelector("#text_data");
 
-  //TEXT
-  //now.innerText= `<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
-  now.innerText= new Date().getFullYear();
+//   //TEXT
+//   //now.innerText= `<b> <i> <mark> ${new Date().getFullYear()} </b></i></mark>`;
+//   now.innerText= new Date().getFullYear();
 
-  //CSS
-  now.style.color="purple";
-  now.style.backgroundColor="yellow";
-  now.style.padding="10px";
-};
+//   //CSS
+//   now.style.color="purple";
+//   now.style.backgroundColor="yellow";
+//   now.style.padding="10px";
+// };
 
-let domData2=()=>{
-  //ID
-  //let domUserData=document.getElementById("dom_id").innerText="ID";
+// let domData2=()=>{
+//   //ID
+//   //let domUserData=document.getElementById("dom_id").innerText="ID";
 
-  //Class
-  //let domUserData=document.getElementsByClassName("dom_class")[0].innerText="Class data";
+//   //Class
+//   //let domUserData=document.getElementsByClassName("dom_class")[0].innerText="Class data";
 
-  //Tag name
-  //let domUserData=document.getElementsByTagName("p")[1].innerText="Tag name data";
-}
+//   //Tag name
+//   //let domUserData=document.getElementsByTagName("p")[1].innerText="Tag name data";
+// }
 
-let outSite=()=>{
-let userInformation=
-  window.confirm("Çıkmak istediğinize emin misiniz?") 
-    ? window.location="https:www.ecodation.com"
-    : window.alert("Çıkış işlemi iptal edildi");
+// let outSite=()=>{
+// let userInformation=
+//   window.confirm("Çıkmak istediğinize emin misiniz?") 
+//     ? window.location="https:www.ecodation.com"
+//     : window.alert("Çıkış işlemi iptal edildi");
 
-}
+// }
 
 //listener
 // let userListener=()=>{
@@ -770,22 +770,22 @@ let userInformation=
 //veriler bizim için önemli. 
 //verileri saklarız. database, browser, cookie, session, localstorage, sessionstorage
 
-let localStorageData=()=>{
+// let localStorageData=()=>{
 
-  const adı=localStorage.setItem("name","Hamit");
-  const soyadi=localStorage.setItem("surname","Mızrak");
-  console.log(localStorage);
+//   const adı=localStorage.setItem("name","Hamit");
+//   const soyadi=localStorage.setItem("surname","Mızrak");
+//   console.log(localStorage);
 
-  const getAdi=localStorage.getItem("name");
-  alert(getAdi);
+//   const getAdi=localStorage.getItem("name");
+//   alert(getAdi);
 
-  //remove Item
-  localStorage.removeItem("name");
+//   //remove Item
+//   localStorage.removeItem("name");
 
-  //clear
-  localStorage.clear();
+//   //clear
+//   localStorage.clear();
 
-}
+// }
 //localStorageData();
 
 
@@ -794,30 +794,46 @@ let localStorageData=()=>{
 
 //Jquery hangi tuşa bastığımı söylesin
 
-let userJqueryKey=()=>{
-  //jquery hazırlanması
-  $(document).ready(function(){
-    $(document).keydown(function(userButton){
-      console.log(userButton);
-      console.log(userButton.keyCode);
-      //keycode (13 )=> enter
+// let userJqueryKey=()=>{
+//   //jquery hazırlanması
+//   $(document).ready(function(){
+//     $(document).keydown(function(userButton){
+//       console.log(userButton);
+//       console.log(userButton.keyCode);
+//       //keycode (13 )=> enter
 
-      //browser sen bir şey yapma, yaparsam ben yaparım
-      userButton.preventDefault();
+//       //browser sen bir şey yapma, yaparsam ben yaparım
+//       userButton.preventDefault();
     
-        // ENTER BASILDI
-        if(userButton.keyCode==13){
-          alert("ENTER bastınız");
-          console.log("ENTER bastınız");
-        }
+//         // if(userButton.ctrlKey){}  //Ctrl basılarak mı tıklanmış 
+//         // ENTER BASILDI
+//         if(userButton.keyCode==13){ // keycode: her karakterin sayısal karşılığı
+//           alert("ENTER bastınız");
+//           console.log("ENTER bastınız");
+//         }
       
-    })//end keydown
-  }); //end document ready
+//     })//end keydown
+//   }); //end document ready
  
-} //end userJqueryKey
-userJqueryKey();
+// } //end userJqueryKey
+// userJqueryKey();
 
 //VKI (LocalStorage)
+//Vücut Kitle Index(VKI)
+//kullanıcıdan alınan kilo ve boy verileri formda inputtan aldıktan sonra
+//Formül: Kilo/(Boy/100)^2	
+//eğer bu formülde 
+//VKI<18 ise düşük kilolu (Doktora gidiniz)
+//VKI>=18 && VKI<=24 ise normal kilolu
+//VKI>=24 ve VKI <29 ise fazla kilolu
+//VKI>=29 ve VKI <32 ise obez kilolu
+//VKI >=32 Çıkarsa aşırı obez kilolu (Doktora gidiniz)
+
+//VKI butonu olsun. bu butona basılınca form açılsın.
+
+
+
+
 
 
 //jquery ajax GET/POST (Backend: Java API)
