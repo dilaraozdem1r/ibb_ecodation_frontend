@@ -845,10 +845,20 @@ let vkiFormule = () => {
           // validation
           if(weight==""){
               $('#validation_weight').html("Kilosu boş geçilemez");
-          } 
+          } else if (jQuery.isNumeric(weight) == false) {
+            // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+           $('#validation_weight').html("Sayı girmelisiniz");
+       }
           // eğer input içinde değer varsa hata mesajı silinsin.
           // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
           // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
+
+
+            // const adi = localStorage.setItem("name", prompt("adınız giriniz"));
+            // const soyadi = localStorage.setItem("surname", "Mızrak");
+            // console.log(localStorage);
+            // const getAdi = localStorage.getItem("name");
+            // alert(getAdi);
 
           // BOY
           height = jQuery.trim($("#height_id").val());
@@ -856,7 +866,12 @@ let vkiFormule = () => {
           // validation
           if(height==""){
               $('#validation_height').html("Boy boş geçilemez");
-          }
+          }else if ($.isNumeric(weight) == false) {
+            // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+           $('#validation_weight').html("Sayı girmelisiniz");
+       }
+
+       
           // eğer input içinde değer varsa hata mesajı silinsin.
           // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
           // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
