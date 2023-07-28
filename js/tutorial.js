@@ -839,6 +839,9 @@ let vkiFormule = () => {
           // Boy ve Kilo
           let weight, height;
 
+         // Local Storage
+         let getLocalWeight, getLocalHeight;
+
           // KİLO
           weight = jQuery.trim($("#weight_id").val());
           // alert(weight);
@@ -848,18 +851,22 @@ let vkiFormule = () => {
           } else if (jQuery.isNumeric(weight) == false) {
             // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
            $('#validation_weight').html("Sayı girmelisiniz");
-       }
+       }else {
+        // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
+        localStorage.setItem("weight", weight);
+        console.log(localStorage);
+        getLocalWeight = localStorage.getItem("weight");
+        console.log(`Local Weight:  ${getLocalWeight}`); 
+      }
+
+       // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+
           // eğer input içinde değer varsa hata mesajı silinsin.
           // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
           // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
 
 
-            // const adi = localStorage.setItem("name", prompt("adınız giriniz"));
-            // const soyadi = localStorage.setItem("surname", "Mızrak");
-            // console.log(localStorage);
-            // const getAdi = localStorage.getItem("name");
-            // alert(getAdi);
-
+           
           // BOY
           height = jQuery.trim($("#height_id").val());
           //alert(height);
@@ -869,9 +876,15 @@ let vkiFormule = () => {
           }else if ($.isNumeric(weight) == false) {
             // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
            $('#validation_weight').html("Sayı girmelisiniz");
-       }
+       }else {
+        // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
+        localStorage.setItem("height", height);
+        console.log(localStorage);
+        getLocalHeight = localStorage.getItem("height");
+        console.log(`Local Height:  ${getLocalHeight}`);
+    }
 
-       
+
           // eğer input içinde değer varsa hata mesajı silinsin.
           // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
           // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
